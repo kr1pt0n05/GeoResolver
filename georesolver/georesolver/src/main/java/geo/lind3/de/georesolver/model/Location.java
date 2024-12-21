@@ -13,7 +13,7 @@ public class Location {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @ColumnDefault("nextval('locations_id_seq')")
     @Column(name = "id", nullable = false)
-    private Integer id;
+    private Long id;
 
     @Column(name = "name", length = 100)
     private String name;
@@ -30,11 +30,11 @@ public class Location {
     @Column(name = "coordinates", columnDefinition = "GEOGRAPHY(POINT, 4326)")
     private Point coordinates;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
