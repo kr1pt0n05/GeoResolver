@@ -1,9 +1,8 @@
-package geo.lind3.de.georesolver.model;
+package geo.lind3.de.georesolver.controller;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.ColumnDefault;
-import org.springframework.data.geo.Point;
-
+import org.locationtech.jts.geom.Point;
 import java.time.LocalDate;
 
 @Entity
