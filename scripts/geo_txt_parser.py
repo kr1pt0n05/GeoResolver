@@ -51,7 +51,7 @@ def parse_txt_file(path):
             # PPLA	first-order administrative division:	a primary administrative division of a country, such as a state in the United States
             # PPLA2	second-order administrative division:	a subdivision of a first-order administrative division
             # ...
-            if data[7] == "PPL" or data[7] == "PPLA" or data[7] == "PPLA2" or data[7] == "PPLA3" or data[7] == "PPLA4" or data[7] == "PPLA5" or data[7] == "PPLX" or data[7] == "PPLS":
+            if data[7] == "ADM1" or data[7] == "ADM2" or data[7] == "ADM3" or data[7] == "ADM4" or data[7] == "ADM5":
                 entry = Entry(data[0], data[1], data[4], data[5], data[8], data[18], data[7])
                 entries.append(entry)
                 i += 1
