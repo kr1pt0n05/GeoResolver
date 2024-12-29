@@ -68,6 +68,6 @@ def insert_geo_data(data, createIndex=False):
         print(f"Error: {e}")
 
 
-data = geo_txt_parser.parse_txt_file("DE/DE.txt")
+data = geo_txt_parser.parse_txt_file("../DE/DE.txt")
 
 insert_geo_data(data, True)
