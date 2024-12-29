@@ -28,17 +28,9 @@ public class LocationService {
     public ResponseEntity<?> reverseGeocode(double latitude, double longitude) {
 
         try {
-            System.out.println("Reverse geocoding...");
             Optional<Location> locationOpt = locationRepository.findByCoordinates(latitude, longitude);
-            System.out.println("Finished querying database...");
-            if(locationOpt.isEmpty()){
-                System.out.println("Location not found");
-            }else{
-                System.out.println("Location found");
-            }
 
             Location location = locationOpt.get();
-            System.out.println(location.getName());
 
             return ResponseEntity.ok(Map.of(
                     "city", location.getName(),
